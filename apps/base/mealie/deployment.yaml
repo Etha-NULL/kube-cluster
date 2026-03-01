@@ -18,5 +18,12 @@ spec:
       containers:
       - image: ghcr.io/mealie-recipes/mealie:v3.10.2
         name: mealie
+        volumeMounts:
+          - mountPath: "/podStorage/mealie-data"
+            name: mealie-data
         ports:
         - containerPort: 9000
+      voumes:
+        - name: mealie-data
+          persistentVolumeClaim:
+            claimName: mealie-data
