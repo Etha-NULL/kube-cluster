@@ -23,7 +23,7 @@ spec:
             name: mealie-data
         ports:
         - containerPort: 9000
-      voumes:
+      volumes:
         - name: mealie-data
           persistentVolumeClaim:
             claimName: mealie-data
