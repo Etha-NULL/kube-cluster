@@ -30,8 +30,8 @@ spec:
       - image: ghcr.io/mealie-recipes/mealie:v3.10.2
         name: mealie
         
-#        securityContext:
-#          allowPrivilegeEscalation: false
+        securityContext:
+          allowPrivilegeEscalation: false
 
         volumeMounts:
           - mountPath: "/etc/mealie-data"
