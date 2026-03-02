@@ -28,7 +28,7 @@ spec:
           allowPrivilegeEscalation: false
 
         volumeMounts:
-          - mountPath: "/etc/mealie-data"
+          - mountPath: "/app/mealie-data"
             name: mealie-data
         ports:
         - containerPort: 9000
