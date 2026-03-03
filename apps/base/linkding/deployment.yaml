@@ -18,7 +18,7 @@ spec:
       - image: sissbruecker/linkding:latest
         name: linkding
         volumeMounts:
-           - mountPath: "etc/linkding-data"
+           - mountPath: "etc/linkding/linkding-data"
              name: linkding-pvc
 
         ports:
