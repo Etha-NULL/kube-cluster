@@ -23,7 +23,7 @@ spec:
       - image: sissbruecker/linkding:latest
         name: linkding
         volumeMounts:
-           - mountPath: "etc/linkding/linkding-data"
+           - mountPath: "etc/linkding/data"
              name: linkding-pvc
         securityContext:
           allowPrivilegeEscalation: false
