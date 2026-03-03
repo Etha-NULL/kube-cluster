@@ -15,13 +15,11 @@ spec:
         app: linkding
     spec:
       containers:
-      - image: sissbruecker/linkding:latest
-        name: linkding
-
-      volumeMonts:
-        - mountPath: "etc/linkding-data"
-          name: linkding-pvc
-
+         - image: sissbruecker/linkding:latest
+           name: linkding
+           volumeMounts:
+           - mountPath: "etc/linkding-data"
+             name: linkding-pvc
 
       volumes:
         - name: linkding-pvc
