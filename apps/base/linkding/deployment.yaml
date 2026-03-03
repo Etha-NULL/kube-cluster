@@ -17,7 +17,9 @@ spec:
       containers:
       - image: sissbruecker/linkding:latest
         name: linkding
+      volumes:
+        - name: linkding-pvc
+          persistentVolumeClaim:
+            claimName: linkding-pvc
         ports:
           - containerPort: 9090
-        resources: {}
-status: {}
