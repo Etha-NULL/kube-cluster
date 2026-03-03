@@ -17,6 +17,12 @@ spec:
       containers:
       - image: sissbruecker/linkding:latest
         name: linkding
+
+      volumeMonts:
+        - mountPath: "etc/linkding-data"
+          name: linkding-pvc
+
+
       volumes:
         - name: linkding-pvc
           persistentVolumeClaim:
