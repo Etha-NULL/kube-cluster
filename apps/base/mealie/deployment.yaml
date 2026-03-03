@@ -15,11 +15,15 @@ spec:
       labels:
         app: mealie
     spec:
-#      securityContext:
+      securityContext:
 #        fsGroup: 911  # www-data group ID
+        runAsUser: 911  # www-data user ID
+        runAsGroup: 911 # www-data group ID
+
+        fsGroup: 33  # www-data group ID
 #        runAsUser: 33 # www-data user ID
-#        runAsGroup: 33 # www-data group ID 
-        
+#        runAsGroup: 33  # www-data group ID
+
       containers:
       - image: ghcr.io/mealie-recipes/mealie:v3.10.2
         name: mealie
